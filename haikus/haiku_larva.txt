@@ -1,0 +1,7 @@
+: bar * sin + ;
+: barx x bar ;
+: bary y bar ;
+: foo
+t sin 17 barx 3 bary 5 barx
+t sin 7 bary 11 barx 13 bary * atan2 4 * cos ;
+1 foo 2 foo 3 foo

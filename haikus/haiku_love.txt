@@ -1,0 +1,21 @@
+(
+Hi, BradN!
+Thank you for your work !
+)
+
+: pulse t 2 * sin 2 / ;
+: x' x .5 - 5 pulse + * ;
+: y' y .5 - 5 pulse + * ;
+
+( use manual pow: )
+: ^2 dup * ;
+: ^3 dup dup * * ;
+
+( cardioida heart )
+: cardioida x' ^2 y' ^2 + 1 - ^3 x' ^2 y' ^3 * - ;
+cardioida abs .4 pow 4 /
+: rainbow ( .f - r g b )
+dup 3 * 1 + sin swap
+dup 3 * 0 + sin swap
+dup 3 * 5 + sin swap drop ;
+rainbow

@@ -1,0 +1,21 @@
+: c push negate swap negate y x z+ dup * swap dup * + pop dup * < ;
+: l push -rot negate swap negate y x z+ 2dup dup * swap dup * + pop dup * < push atan2 - abs 0.05 < pop * ;
+: p dup rot dup sin swap cos rot * -rot * rot + -rot + swap ;
+: a t 3 * sin ;
+: b a 1.1 * ;
+: m x 10 * + + sin 1 over dup * - sqrt atan2 swap / y 0.6 - > ;
+0.5 0.7 -1.57 0.3 l
+0.5 0.4 -1.57 a + 0.15 l +
+0.5 0.4 -1.57 a + 0.15 p -2 b + 0.2 l +
+0.5 0.4 -1.57 a - 0.15 l +
+0.5 0.4 -1.57 a - 0.15 p -2 b - 0.2 l +
+0.5 0.6 -1.57 a + 0.1 l +
+0.5 0.6 -1.57 a + 0.1 p -0.5 b + 0.1 l +
+0.5 0.6 -1.57 a - 0.1 l +
+0.5 0.6 -1.57 a - 0.1 p -0.5 b - 0.1 l +
+0.5 0.7 0.05 c + 
+dup 0 swap
+15 1 t 2 / m 20 3 t m +
+25 0 t 4 / m 35 4 t 4 / m + +
+y 0.2 > *
++

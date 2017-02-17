@@ -1,0 +1,5 @@
+( test of visualizing equation F[x,y]=0 )
+: x' x .5 - 3 * ;
+: y' y .5 - 3 * ;
+: cardioida x' 2 ** y' 2 ** + 1 - 3 ** x' 2 ** y' 3 ** * - ;
+cardioida -.3 - abs .3 < ( t 5 * sin .2 - + abs .1 < )

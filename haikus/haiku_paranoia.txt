@@ -1,0 +1,6 @@
+: =? - abs .3 - abs 4 * sin 1 + 2 / dup * ;
+: xt x 50 * sin ;
+: yt y 50 * t + cos t sin .3 / + ;
+xt x 2 * - abs yt y 2 * - abs =?
+xt x 5 * - abs yt y 7 * - abs =?
+xt x 8 * - abs yt y 3 * - abs =?

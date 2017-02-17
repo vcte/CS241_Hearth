@@ -1,0 +1,13 @@
+( Welcome to www.thesands.ru/forth-demotool/ )
+: f
+2dup
+* 2 * .17 + -rot
+.4 ** sin swap .7 ** - .13 +
+;
+y x .5 - f f
+.15 rot /
+.11 rot / log
+y *
++ abs dup 7 / over
+log
+rot

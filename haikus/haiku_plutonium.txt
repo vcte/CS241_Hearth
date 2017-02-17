@@ -1,0 +1,8 @@
+: xo x 0.5 - 2 * ;
+: yo y 0.5 - 2 * ;
+
+: level dup push xo * 0.125 - 4 * t 1.2 * sin 8 * + floor 2 mod 0 = 0.5 *
+pop dup push yo * 0.125 + 4 * t cos 8 * + floor 2 mod 1 = 0.5 * + floor pop * ;
+: blit dup push level - 0 max pop dup push level + pop 0.08 - ;
+0 0
+1 blit blit blit blit blit blit blit blit blit blit blit blit drop 0.3

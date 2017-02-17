@@ -1,0 +1,12 @@
+: d push x - dup * pop y - dup *
++ sqrt ;
+: r 2dup push push d 200 * x pop - y pop - atan2 20 * sin 3 * + sin ;
+: xor + abs 2 mod ;
+.5 .5 r
+t 10 / dup push
+sin abs
+pop
+cos abs
+r
+xor
+dup dup

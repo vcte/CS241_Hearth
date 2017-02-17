@@ -1,0 +1,6 @@
+( fixed animation )
+: w t 360 mod 38000 + 9999 / sin 2 / .55 + / x .5 - over * dup * y .5 - rot * dup * + ;
+30 w sin
+60 w cos
+over +
+1

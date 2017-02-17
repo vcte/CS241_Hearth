@@ -1,0 +1,23 @@
+: x x 2 * 1 - ;
+: y y 2 * 1 - ;
+: d dup ; : o over ;
+: l
+o -2 * o / 4 t 3 / sin + + >r
+o x * o / >r
+o y * o / 1 + d 1 -
+t sin + ( jump )
+d 2 * 20 ** swap 2 ** min
+
+r> r> ( rotate )
+2dup t cos * swap t sin * - >r
+t sin * swap t cos * +
+
+d 2 * 20 ** swap 2 ** min +
+r> .6 ** + sqrt 1 -
+min
+rot + swap ;
+0
+x d * y d * + 4 + sqrt
+l l l l l l l l l l l
+drop
+d 4.5 / 2 ** swap 9 / d 20 / 1 swap - -rot ( colors )

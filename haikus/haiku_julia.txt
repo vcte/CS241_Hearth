@@ -1,0 +1,8 @@
+: c t 0.01398413 + sin t -0.9132423 + sin ;
+: iterate 2dup z* c z+ ;
+: norm dup * swap dup * + ;
+: j 2dup >r >r norm 4 > + r> r> iterate ;
+: scale 0.5 - 2 pi * * 0.5 * ;
+: sclxy scale swap scale swap ;
+: julia 0 x y sclxy j j j j j j j j j j j j j j j j drop drop ;
+julia 16 / dup dup

@@ -1,0 +1,40 @@
+: w t 16 + ;
+: d dup ;
+: f 1 mod ;
+: p w 2 * sin .3 * .5 + ;
+: c y * floor 3 mod swap / - d 0 > ;
+: r / f 0.5 - d 0 > 2 * 1 - * 2 * ;
+: by w 3.1 r ;
+
+x 16 * f .04 >
+y 32 * f .07 >
+* y .69 > *
+5 16 c
+6 32 c
+8 8 c
+drop
+
+by d w .02 - 3.1 r - 0 < *
+
+w 1 by - 1.55 * - 7 r
+16 * floor .52 + 16 /
+x - abs 0.03 <
+*
+y .72 < y .69 > * *
+2 /
+
+x w 7 r - d *
+y by .64 * .038 + - d * +
+sqrt .015 < 2 *
++
+
+y .028 <
+x
+w 7 r p over - by * +
+- abs .06 < *
++
+
+d d >r >r
++ rot
+r> + rot
+r> + rot

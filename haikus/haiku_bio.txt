@@ -1,0 +1,4 @@
+: xy x y -.5 -.5 z+ ;
+0
+xy pi pi 2 * z* sin swap cos 2dup z* 2dup z* 2dup z* t pi * sin t 2 * pi * cos z* .1 + + sqrt 1.3 swap -
+dup 3 ** swap abs .5 **

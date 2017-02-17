@@ -1,0 +1,21 @@
+: z .5 - t 11 / sin 2 + / ;
+: asin t 3 / sin 2 / 1 + over dup * - sqrt atan2 ;
+: l
+2dup dup * swap dup * + sqrt
+dup >r -rot r>
+dup * swap over
+/ -rot /
+t .154 * - sin asin
+swap
+t .2485 * + sin asin
+2dup dup * swap dup * +
+1 swap - 0 max
+1 mod 6 * 3 - abs 0 max 1 min
+>r rot 1 r> - * 1 +
+r> + >r
+;
+0 >r
+x z y z l l l l
+r>
+4 / / over 1 swap -
+( welcome to http://thesands.ru/forth-demotool/ )

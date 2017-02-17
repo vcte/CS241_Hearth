@@ -1,0 +1,5 @@
+: b x * sin ;
+: e y * cos / log cos ;
+8 b 16 e
+17 b 10 e
+5 b 9 e

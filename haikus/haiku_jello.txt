@@ -1,0 +1,8 @@
+: foo pi swap x y + 1 - * 3 * pow 1 mod ;
+: glass push push push
+x pop * sin foo
+y pop * sin foo *
+x y * pop * sin foo * ;
+7 17 19 glass dup
+17 19 7 glass + dup
+19 7 17 glass + swap

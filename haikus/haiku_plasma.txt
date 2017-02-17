@@ -1,0 +1,16 @@
+: m .5 - -4 * ;
+: l
+y m pi * t 5 / + cos x m + t 9 / - cos
+.02 * +
+swap
+x m pi * t 3 / + cos y m + t 7 / + cos
+.02 * +
+swap
+;
+.3 .6 l l l l l l l l l l l l l l l l l l l l l l l l l l l
+-
+dup negate log
+dup negate
+swap 3 ** swap
+over 2 ** +
+swap 7 / swap

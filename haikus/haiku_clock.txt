@@ -1,0 +1,19 @@
+: h t pi 21600 / * ; : m h 12 * ; : s m 60 * ;
+: c pop dup push ;
+: nx x 0.5 - ; : ny y 0.5 - ;
+: a 0 c sin - ; : b 0 c cos - ;
+: l dup * swap dup * + ;
+: k 0.5 x - a * 0.5 y - b * + ;
+: p
+push push push
+nx a * 0 <
+ny b * 0 <
+nx k a * +
+ny k b * +
+l pop drop pop <
+nx ny l pop <
+* * * ;
+s 0.0001 0.2 p
+m 0.0005 0.1 p
+h 0.0005 0.05 p
+1

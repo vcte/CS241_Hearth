@@ -1,0 +1,8 @@
+: x' x 1 - abs ;
+: k t sin 1 + ;
+: kb 3 k / ;
+: n 0.3 - pi k * * ;
+: f y n sin abs x' n 0.2 * mod kb * 
+y n sin abs x n 0.2 * mod kb * + ; 
+f
+f t sin *

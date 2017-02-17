@@ -1,0 +1,10 @@
+: x t sin 0.2 * x + ;
+: y t .3 * sin 0.2 * y + ;
+: 2square 2 * dup * ;
+t floor 5 / 1 mod
+t 3.1 * floor 3 / 1 mod +
+1 mod t 11 / 1 mod +
+x 0.4 - 2square y 0.7 - 2square +
+x 0.6 - 2square y 0.2 - 2square +
+min 1 min * x 2 / +
+x .3 - over / y .2 - / sin over 2dup z*

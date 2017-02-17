@@ -1,0 +1,4 @@
+: frac dup floor - ;
+: a * sin + ;
+: b sin t swap 5 a y 9 a x 7 a frac pi * sin ;
+x b y b t 2 / b

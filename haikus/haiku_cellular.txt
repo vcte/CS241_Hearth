@@ -1,0 +1,19 @@
+: s - 2 ** ;
+: d y s swap x s + sqrt >r ;
+: h 158 t 100 mod 100 / + 2000 / * tan tan tan 1 mod ;
+: r dup 1 + swap h swap ;
+: 8r r r r r r r r r ;
+: 32r 8r 8r 8r 8r ;
+: 4d d d d d ;
+: 16d 4d 4d 4d 4d ;
+: 4p r> r> r> r> ;
+: 16p 4p 4p 4p 4p ;
+: 4m min min min min ;
+: 16m 4m 4m 4m 4m ;
+
+: k*c ( k r g b - kr kg kb ) push push over * swap pop over * swap pop * ;
+
+1 32r drop 16d 16p 1 16m
+0.5 swap - 2 *
+
+1.0 0.5 0.7 k*c

@@ -1,0 +1,27 @@
+(
+x1 = xcosa - ysina,
+y1 = xsina + ycosa
+)
+
+: rotate ( x y a - x1 y1 )
+dup sin swap cos 
+( x y sa ca )
+2dup >r >r 
+( x y sa ca R:ca sa ) 
+rot dup >r * 
+( x sa yca R:ca sa y ) 
+-rot over * swap r> r> r> 
+( yca xsa x y sa ca ) 
+-rot * -rot * 
+( yca xsa ysa xca ) 
+swap - -rot + 
+( x1=xca-ysa y1=xsa+yca ) 
+;
+
+: n 1 + 2 / ;
+
+x t cos n - y t sin n - t 1 mod pi * 2 * rotate - abs .1 ** 1 - negate
+
+x t sin n - y t cos n - t 1 mod pi * -2 * rotate - abs .1 ** 1 - negate
+
+x t cos n + y t cos n + t 1 mod pi * 2 * rotate - abs .1 ** 1 - negate

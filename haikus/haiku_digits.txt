@@ -1,0 +1,35 @@
+: x1 .3 ;
+: x2 .4 ;
+: x3 .6 ;
+: x4 .7 ;
+: y1 .1 ;
+: y2 .2 ;
+: y3 .45 ;
+: y4 .55 ;
+: y5 .8 ;
+: y6 .9 ;
+: m1 x x1 > x x4 < * ;
+: m2 y y1 > y y6 < * ;
+: m m1 m2 * ;
+: a y y5 > ;
+: g y y3 > y y4 < * ;
+: d y y2 < ;
+: f x x2 < y y3 > * ;
+: e x x2 < y y4 < * ;
+: b x x3 > y y3 > * ;
+: c x x3 > y y4 < * ;
+: ef x x2 < ;
+: bc x x3 > ;
+: s t 10 mod ;
+0 s <= 1 s > * a bc d ef + + + *
+1 s <= 2 s > * bc * +
+2 s <= 3 s > * a b d e g + + + + * +
+3 s <= 4 s > * a bc d g + + + * +
+4 s <= 5 s > * bc f g + + * +
+5 s <= 6 s > * a c d f g + + + + * +
+6 s <= 7 s > * a c d ef g + + + + * +
+7 s <= 8 s > * a bc + * +
+8 s <= 9 s > * a bc d ef g + + + + * +
+9 s <= 10 s > * a bc d f g + + + + * +
+m *
+dup dup

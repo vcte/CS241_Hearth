@@ -1,0 +1,5 @@
+: xy x y -.5 -.5 z+ ;
+: r xy 2dup negate z* + sqrt ;
+xy atan2 3 * sin dup * 4 ** 2 /
+r 18 * sin t sin - abs max
+dup tan 10 / dup 30 * cos

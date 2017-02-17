@@ -1,0 +1,6 @@
+: n 3 mod ceil ;
+x y 2 * 8 8 z* n
+dup rot n
+= x 16 * n
+rot + 4 = - 2 +
+3 / dup 2 / dup 2 /

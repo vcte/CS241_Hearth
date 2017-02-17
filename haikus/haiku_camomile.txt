@@ -1,0 +1,11 @@
+: square dup * ;
+: dist square swap square + sqrt ;
+: center 0.5 - swap 0.5 - ;
+
+x y center 2dup dist push atan2 pop swap dup
+3 * t - sin 1 + 4 / 
+swap 20 * t 2 * + sin 10 /
++
+- 
+abs 1 + 1 swap / 
+square square

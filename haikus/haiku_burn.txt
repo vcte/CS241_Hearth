@@ -1,0 +1,10 @@
+: square dup * ;
+: 2dup over over ;
+: len square swap square + sqrt ;
+: spiral x - swap y - 
+2dup len push atan2 pop + 20 * sin ;
+0.2 0.2 spiral
+0.7 0.3 spiral
+0.4 0.6 spiral * *
+dup x *
+1 x - 1 y - + 0.25 *

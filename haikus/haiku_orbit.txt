@@ -1,0 +1,5 @@
+x y x 0.7 * + * 0.4 +
+dup 3 pow
+dup 4 pow
+x 0.2 - dup * y 0.4 - dup * + 0.1 <
+x y * 5 * * +

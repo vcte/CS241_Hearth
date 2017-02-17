@@ -1,0 +1,3 @@
+: q .6 - 5 * dup 1 mod * ;
+x q y q + t 30 / sin - 1 mod
+dup sqrt

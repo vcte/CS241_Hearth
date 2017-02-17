@@ -1,0 +1,11 @@
+: p 2 * pi * cos 0.5 * 0.5 + ;
+: col dup dup p swap 1 3 / + p rot 2 3 / + p ;
+: s 0.5 - * ;
+: z t sin 5 * 7 + * ;
+: b / floor 2 mod ;
+: w dup
+t cos x s t sin y s + z 64 *
+t cos y s t sin x s - z 64 * rot
+dup rot swap b -rot b + abs 2 mod * + ;
+0 1 w 2 w 4 w 8 w 16 w 32 w 64 w 256 /
+t + col

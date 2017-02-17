@@ -1,0 +1,35 @@
+: q dup * ;
+: dst q swap q + sqrt ;
+: acos dup q 1 - negate sqrt swap 1 + atan2 2 * ;
+
+: r 0.5 ;
+: ' 0.5 - ;
+: l x ' y ' dst ;
+
+: in? l r < ;
+: z r q l q - sqrt ;
+
+: th y ' acos 2 * pi / ;
+: ph z x ' atan2 pi / t 10 / + ;
+
+( : txtr 25 25 z* cos >r cos r> < 0.3 max ; )
+
+: txtr 25 -25 z* cos swap cos max abs 16 pow ;
+
+: xy x .5 - y .5 - t 2 * 4 + sin 9 / t 6 * y + sin 5 / z+ ;
+: r xy t 3 * sin 3 / t 4 * sin 5 / z+ 2dup negate z* + sqrt ;
+: a atan2 24 / ;
+: r'' a abs log 2 / ;
+
+: txtr r'' r - .12 - abs 2 ** .01 - ;
+
+ph th txtr
+z *
+in? *
+
+: rainbow ( .f - r g b )
+dup 3 * 1 + sin swap
+dup 3 * 0 + sin swap
+dup 3 * 5 + sin swap drop ;
+
+t 12 / sin 5 * + rainbow 

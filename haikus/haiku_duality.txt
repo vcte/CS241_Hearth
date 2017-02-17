@@ -1,0 +1,23 @@
+: x1 t cos x .5 - * t sin y .5 - * - .5 + ;
+: y1 t sin x .5 - * t cos y .5 - * + .5 + ;
+: xc x1 .5 - ;
+: yc y1 .5 - ;
+: yt y1 .7 - ;
+: yb y1 .3 - ;
+: r1 .16 ;
+: r2 .04 ;
+: r3 .005 ;
+: len dup * swap dup * + ;
+: c1 xc yc len r1 < ;
+: c2 xc yc len r1 - dup .009 > swap .015 < and ;
+: lr x1 .5 < ;
+: wb xc yt len r2 < ;
+: bb xc yb len r2 > ;
+: ws xc yb len r3 < ;
+: bs xc yt len r3 > ;
+
+c1 lr min
+bb min wb max bs min ws max
+c2 max
+
+dup dup

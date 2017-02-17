@@ -1,0 +1,21 @@
+: p 2 * .8 - ;
+: r x x * p y y * p + sqrt ;
+: i r 10 * floor ;
+1
+y p x p atan2
+128 i 10 / ** floor
+*
+123.34 i *
+t 2 / cos
+r i * 10 /
+* 100 *
+-
+t -5 / 1 mod pi * 20 *
++
++
+cos 2 / .5 + 10 /
+r +
+10 * floor 10 /
+-
+dup 2 / swap 2dup +
+( based on SunFlower 3 by FabriceNeyret2 )

@@ -1,0 +1,5 @@
+: sinc dup t 0.5 * * sin swap / ;
+x 0.5 - 31 * sinc 0.7 + 2 / y - abs 0.03 <
+x 0.5 - 23 * sinc 0.7 + 2 / y - abs 0.03 <
+x 0.5 - 17 * sinc 0.7 + 2 / y - abs 0.03 <
+ 

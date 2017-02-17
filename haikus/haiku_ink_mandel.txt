@@ -1,0 +1,8 @@
+: z^2 2dup z* ;
+: layer push push z^2 pop pop 2dup push push z+ pop pop ;
+: many layer layer layer layer layer layer layer layer layer layer ;
+: len dup * swap dup * + ;
+: mant y 0.7 - 3 * x 0.5 - 3 * many drop drop len dup 1 < * ;
+t cos 1 + 2 / t sin 1 + 2 / mant
+t sin 1 + 2 / t cos 1 + 2 / mant
+t cos 1 + 2 / t cos 1 + 2 / mant

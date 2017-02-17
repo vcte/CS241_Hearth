@@ -1,0 +1,3 @@
+x y 2dup z* 0.3 + 2dup
+2dup z* 2dup z* +
+push x y * * pop sqrt

@@ -1,0 +1,25 @@
+: n 1 + 2 / ;
+: tt t ;
+: xn x .5 - ;
+: yn y .5 - ;
+: r@ r> dup >r ;
+: x' ( t - x1 ) dup cos xn * swap sin yn * - ;
+: y' ( t - y1 ) dup sin xn * swap cos yn * + ;
+: line-test ( t p1 p2 - ) >r >r >r r@ y' abs 0.01 - 1 - negate 200 ** r> x' r> ( p2 ) - abs r> ( p1 ) < * ;
+
+: arc pi * 2 * 4.73 + ;
+: subs t arc .17 .26 line-test 10 / ;
+: ss t floor 60 / arc .14 .23 line-test 10 / ;
+: mm t 3600 / arc .12 .17 line-test 3 / ;
+: hh t 3600 / 12 / arc .05 .11 line-test ;
+
+: xy x 0.5 - y 0.5 - ;
+: rr xy 2 ** swap 2 ** + sqrt ;
+: ticks xy rr dup .39 > swap .43 < * >r atan2 6 * 1.4 + sin abs 200 ** 1.0 / r> * + ;
+: circle rr dup .47 - abs 64 * -2 ** * + ;
+: pimpka rr 1.02 - abs 200 ** 2 / max ;
+: decor ticks circle pimpka ;
+
+ss subs .5 * max decor
+mm subs .25 * max decor
+hh subs .8 * max decor

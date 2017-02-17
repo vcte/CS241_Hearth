@@ -1,0 +1,7 @@
+: time 
+t 10 mod .1 * pi * sin mod ;
+
+y x dup dup * swap dup dup * swap z* time pi * 
+y negate time sqrt mod 2.4 * 
+x negate time sqrt mod 2.4 * 
+0 over .035 >

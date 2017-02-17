@@ -1,0 +1,45 @@
+: d dup ;
+: fract d floor - ;
+: x x .5 - ;
+: y y .5 - ;
+: len x d * y d * + sqrt ;
+: len2 x 2 * d * y 2 * d * + sqrt ;
+: mix 1 over - z* swap drop ;
+
+: f fract 3 over 2 * - over * * ;
+
+: uvx x y atan2 pi 2 * / .5 + 48 * ;
+: uvy len .4 * t .05 * - 48 * ;
+: uvz .5 t .01 * + 48 * ;
+
+: v 3 mod floor ;
+
+: uv0x uvx v ;
+: uv1x uvx 1 + v ;
+
+: uv0y uvy v 100 * ;
+: uv1y uvy 1 + v 100 * ;
+
+: uv0z uvz v 10000 * ;
+: uv1z uvz 1 + v 10000 * ;
+
+: vx uv0x uv0y uv0z + + ;
+: vy uv1x uv0y uv0z + + ;
+: vz uv0x uv1y uv0z + + ;
+: vw uv1x uv1y uv0z + + ;
+
+: ra .001 * sin 100000 * fract ;
+: rb uv1z + uv0z - ra ;
+: r0 vx ra vy ra uvx f mix vz ra vw ra uvx f mix uvy f mix ;
+: r1 vx rb vy rb uvx f mix vz rb vw rb uvx f mix uvy f mix ;
+
+3 len2 3 * -
+.5
+r0 r1 uvz f mix 2 * 1 -
+*
++
+
+( color correction )
+0 max d 2 ** .4 * over 3 ** .15 *
+
+( based on “Ball of Fire” GLSL shader by Trisomie21 )

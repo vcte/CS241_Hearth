@@ -1,0 +1,26 @@
+: z
+x .5 -
+y .5 -
+( complex number in polar form )
+2dup dup * swap dup * + sqrt -rot
+swap atan2
+;
+: 2pi 2 pi * ;
+: fix ( angle ) abs 2pi mod pi - ;
+: norm pi / ;
+: *_ ( multiply two complex numbers ) -rot + -rot * swap fix ;
+: /_ ( divide two complex numbers ) -rot swap - -rot / swap ;
+: ^_ ( raise a complex number to a real power ) rot over ** -rot * ;
+
+z
+z 1 4 *_
+/_
+t -
+
+5 ^_ ( number of rays )
+
+fix 1 swap - norm
+swap drop
+
+( color correction )
+dup sqrt 2dup + abs .6 *

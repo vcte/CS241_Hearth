@@ -1,0 +1,8 @@
+: s - abs ;
+: d y s swap x s + ;
+: h 139 * cos 1 mod ;
+: r r> t + dup >r h ;
+: i r r d min ;
+: 8i i i i i i i i i ;
+1 0 >r 8i 8i 8i r> drop random *
+dup dup

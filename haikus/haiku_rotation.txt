@@ -1,0 +1,5 @@
+: h .5 - * ; : z 1 1 y h / -1 * ; 
+: s h t sin ; : d x z * z 2 / - ;
+t cos y z * s d h - t - 2 *
+floor t cos d s y z * h +
+2 * + 2 mod floor z .2 * /

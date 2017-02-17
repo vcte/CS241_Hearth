@@ -1,0 +1,35 @@
+: star >r 1024 / 1 swap - y - abs swap 1024 / x - abs + 20 * 0.3 ** r> ** 1 - negate 20 * t 10 * x y + 10 * + sin 1.5 + 3 / * ;
+: ! max ;
+: c 256 / * ;
+
+: orion
+( red )
+0
+320 160 .1 star 250 c !
+548 702 .1 star 220 c !
+( green )
+0
+320 160 .1 star 140 c !
+548 702 .05 star 250 c !
+( blue )
+0
+320 160 .1 star 120 c !
+535 48 .1 star !
+535 48 .1 star !
+643 196 .1 star !
+484 556 .08 star !
+530 524 .08 star !
+575 483 .08 star !
+506 584 .06 star !
+659 571 .07 star !
+541 678 .04 star !
+548 702 .02 star 100 c !
+544 742 .06 star !
+417 889 .1 star !
+767 816 .12 star !
+982 360 .05 star !
+1012 217 .05 star !
+1017 70 .05 star !
+; 
+
+orion

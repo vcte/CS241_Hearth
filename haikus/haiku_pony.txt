@@ -1,0 +1,18 @@
+: m .5 - 2 * abs ;
+: c
+r> pi + t 30 / cos 2 * abs + 1 mod
+x m over - 2 **
+over y m - 2 **
++ sqrt
+r> pi
+t 300 / sin 7.1 *
+/ log +
+dup 1 mod >r
+- abs 1 min sqrt 1 swap -
+swap >r
+;
+.21 .721 >r >r
+c c max c - sqrt c +
+c c min c + c - sqrt
+c c +
+r> drop r> drop

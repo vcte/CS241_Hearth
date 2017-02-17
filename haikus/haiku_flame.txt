@@ -1,0 +1,2 @@
+x y sqrt max
+x y dup * min

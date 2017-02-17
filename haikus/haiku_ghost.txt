@@ -1,0 +1,12 @@
+: sinc dup sin swap / ;
+: square dup * ;
+: len square swap square + sqrt ;
+: 2dup over over ;
+: burst x - swap y - 2dup len push atan2 pop 10 * + sin ;
+: junk 2dup 0.2 + swap 0.3 + burst push
+2dup 0.7 + swap 0.2 + burst push
+0.4 + swap 0.7 + burst pop pop
+* * ;
+0 0 junk x y * + dup
+0.2 0.7 junk y + 0.7 * + dup
+0.7 0.2 junk x + +

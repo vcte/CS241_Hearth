@@ -1,0 +1,4 @@
+: trail t 4 * x + + sin y 2 * 1 - - abs 1 swap - ;
+0 trail
+1 trail
+2 trail

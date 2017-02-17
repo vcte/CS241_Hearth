@@ -1,0 +1,5 @@
+: d t 2 * 2 mod 1 + / ;
+: v d * floor 3 mod 1 = ;
+: l dup dup x v
+swap y v and swap 3 * ;
+0 3 l l l l l drop + + + +

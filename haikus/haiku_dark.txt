@@ -1,0 +1,27 @@
+: no 1 - abs ;
+: h sin 43758.5453 * dup floor - ;
+: b
+2dup
+2dup
+311.7 127.1 z* h swap drop x - dup *
+-rot
+183.3 269.5 z* h swap drop y - dup *
++ sqrt
+r> 2dup
+<
+dup 2dup >r >r >r >r swap
+t x + cos *
+t x + sin *
+r> * swap r> no * +
+-rot 2dup +
+r> * r> no r> * +
+>r
+rot >r
+1 +
+;
+: a 1 + 0 b b b drop ;
+0 >r 999 >r
+-1 a a a drop
+r> 400 * cos
+r> h *
+1.7 * dup dup

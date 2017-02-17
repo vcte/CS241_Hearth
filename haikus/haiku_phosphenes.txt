@@ -1,0 +1,44 @@
+: sq dup * ; 
+: xs 10 mod .1 * ;
+
+: xpos xs x - abs ;
+: ypos xs y - abs ;
+: rad sq swap sq + sqrt ;
+: circle rot xpos rot ypos rad swap .01 * > ;
+
+: n negate ;
+: bl t t ;
+: tl bl n ;
+: br tl swap ;
+: tr br n ;
+
+: pulsar t xs * tan circle ;
+
+: s 
+dup x swap > 
+swap y < 
+=
+;
+
+: m 600 pulsar = ;
+: l 800 pulsar = ;
+
+
+.4
+.4
+br m
+bl m
+br m
+tl m
+tr m
+1
+bl l
+br l
+tl l
+tr l
+
+.00 s .04 s
+.06 s .08 s 
+.92 s .94 s 
+.96 s 1 s 
+= = = = = = =

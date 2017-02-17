@@ -1,0 +1,9 @@
+: rand random 0.5 - t sin * ;
+: x0 x 0.5 - 4 * rand + ;
+: y0 y 0.5 - 4 * rand + ;
+: r t 15 mod 1 + 3 / ;
+: dist x0 r ** y0 r ** + 1 r / ** ;
+
+dist 1 < random *
+dup random * 
+dup random * 3 *

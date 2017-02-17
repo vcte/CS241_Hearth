@@ -1,0 +1,16 @@
+: sq dup * ;
+: xs 10 mod 10 / ;
+: q rot - sq ;
+: ab 
+xs swap xs 
+x q y q + sqrt ;
+: n negate ;
+: bl t dup ; 
+: br bl n ; 
+: tl br swap ; 
+: tr tl n ; 
+
+bl ab .2 <
+br ab .2 <
+tl ab .2 < 
+-5 -5 ab .5 <

@@ -1,0 +1,12 @@
+: f ( a b c d x - bsin[xd+c]+a )
+* + sin * + ;
+
+: fourier
+0 1 0 9 x x * 1 y y * - / t + f
+0 1 4 8 x x * 1 y y * - / t + f
+0 1 2 7 x x * 1 y y * - / t + f
+;
+
+fourier + +
+fourier 3 / + 4 / +
+fourier 2 / + -3 / +

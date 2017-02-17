@@ -1,0 +1,8 @@
+: mx x 0.7 - 3 * ;
+: my y 0.5 - 3 * ;
+: sq dup * ;
+: c sq swap sq + 4 > ;
+0 mx my 
+: it 2dup push push c + pop pop 2dup z* mx my z+ ;
+it it it it it it it it it it it it it it it it it it it it
+drop drop 0.8 swap dup 20 / swap 20 / 1.2 * 1 min

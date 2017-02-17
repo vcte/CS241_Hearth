@@ -1,0 +1,3 @@
+random sin
+: the random sin ;
+: behold the random sin ; behold

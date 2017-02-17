@@ -1,0 +1,7 @@
+: x' x 0.3 - ;
+: y' y 0.1 + ;
+x' y' * 40 * sin
+1 x' - y' * 30 * sin *
+x' 1 y' - * 20 * sin *
+dup x' / sin
+dup y' / cos 1 x - 1 y - + *

@@ -1,0 +1,4 @@
+1 x .5 - y .5 - 2dup atan2
+.8 * .5 + floor .8 / dup
+cos swap sin z* .4 - swap
+.6 / abs + abs - 2 **

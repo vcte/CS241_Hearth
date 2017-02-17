@@ -1,0 +1,10 @@
+: harm ( a b c d x - a+b*sin[x*d+c] ) * + sin * + ;
+
+: r y .5 - dup * x .5 - dup * + sqrt ;
+: a y .5 - x .5 - atan2 ;
+
+0
+r pi 50 * * floor 10 mod 0 =
+a pi / 120 * t -2 * + floor 10 mod 0 = or 3 / r .13 > *
+.6 .5 2 2 r 3 * a + harm
+1 - negate

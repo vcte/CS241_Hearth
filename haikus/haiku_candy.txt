@@ -1,0 +1,4 @@
+: r dup y 12 ** * t + sin swap x * cos + 1 mod ;
+18 r
+25 r
+dup 12 r /
